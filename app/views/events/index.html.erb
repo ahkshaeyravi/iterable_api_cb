@@ -1,0 +1,15 @@
+
+<h1>Welcome - Iterable API Mocks</h1> 
+
+<h1>Create events using either one of the below two buttons</h1>
+
+<%= button_to 'Create Event A', trigger_event_a_path, method: :get %>
+<%= button_to 'Create Event B', trigger_event_b_path, method: :get %>
+
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+<% if flash[:alert] %>
+  <p><%= flash[:alert] %></p>
+<% end %>
