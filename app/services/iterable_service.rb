@@ -9,7 +9,7 @@ class IterableService
     end
   
     def create_event(user_id, event_name)
-      VCR.use_cassette("create_event_#{event_name}") do
+      VCR.use_cassette("create_#{event_name.downcase}") do
         body = { "userId" => user_id, "eventName" => event_name }.to_json
         self.class.post('/events/track', headers: @headers, body: body)
       end
@@ -17,7 +17,7 @@ class IterableService
   
     def send_email(user_id, email_template_id)
       VCR.use_cassette("send_email_#{email_template_id}") do
-        body = { "recipientEmail" => user_id, "campaignId" => email_template_id }.to_json
+        body = { "recipientUserId" => user_id, "campaignId" => email_template_id }.to_json
         self.class.post('/email/target', headers: @headers, body: body)
       end
     end
