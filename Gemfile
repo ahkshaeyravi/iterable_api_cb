@@ -49,6 +49,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
   gem 'vcr'
   gem 'webmock' 
+  gem 'byebug'
 end
 
 group :development do
@@ -72,5 +73,4 @@ group :test do
 end
 
 gem 'httparty'
-
 gem 'devise'
