@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.iterable.com/api/email/target
+    body:
+      encoding: UTF-8
+      string: '{"recipientUserId":1,"campaignId":1}'
+    headers:
+      Authorization:
+      - de933823ndme318mo2!cf428G
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ok
+    headers:
+      Date:
+      - Thu, 15 Aug 2024 07:22:34 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '135'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin,Accept-Encoding
+      Request-Time:
+      - '1'
+      Server:
+      - iterable-ingress b886
+      X-Upstream:
+      - low_traffic
+    body:
+      encoding: ASCII-8BIT
+      string: '{"msg": "string", "code": "Success", "params": {}}'
+  recorded_at: Thu, 15 Aug 2024 07:22:34 GMT
+recorded_with: VCR 6.2.0

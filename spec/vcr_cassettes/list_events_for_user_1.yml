@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.iterable.com/api/events/byUserId/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - de933823ndme318mo2!cf428G
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ok
+    headers:
+      Date:
+      - Thu, 15 Aug 2024 06:53:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '140'
+      Connection:
+      - keep-alive
+      Vary:
+      - Origin,Accept-Encoding
+      Request-Time:
+      - '0'
+      Server:
+      - iterable-ingress 56a1
+      X-Upstream:
+      - high_traffic
+    body:
+      encoding: ASCII-8BIT
+      string: '{"events": [{"eventName": "Event B"}]}'
+  recorded_at: Thu, 15 Aug 2024 06:53:02 GMT
+recorded_with: VCR 6.2.0
