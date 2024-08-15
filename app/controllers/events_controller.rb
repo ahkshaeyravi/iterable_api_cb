@@ -33,9 +33,11 @@ class EventsController < ApplicationController
   
     def send_event_b_notifications
       events = @iterable_service.list_events(current_user.id)
+      events = events.parsed_response
+      events = events["events"]
       events.each do |event|
         if event['eventName'] == 'Event B'
-          @iterable_service.send_email(current_user.email, 1)
+          @iterable_service.send_email(current_user.id, 1)
         end
       end
     end
