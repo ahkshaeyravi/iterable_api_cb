@@ -16,15 +16,15 @@ class IterableService
     end
   
     def send_email(user_id, email_template_id)
-      VCR.use_cassette("send_email_#{email_template_id}") do
+      VCR.use_cassette("send_email_template_#{email_template_id}") do
         body = { "recipientUserId" => user_id, "campaignId" => email_template_id }.to_json
         self.class.post('/email/target', headers: @headers, body: body)
       end
     end
   
     def list_events(user_id)
-      VCR.use_cassette("list_events_#{user_id}") do
-        self.class.get("/events/get?userId=#{user_id}", headers: @headers)
+      VCR.use_cassette("list_events_for_user_#{user_id}") do
+        self.class.get("/events/byUserId/#{user_id}", headers: @headers)
       end
     end
   end
