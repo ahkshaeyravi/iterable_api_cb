@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 
     before_action :authenticate_user!, only: [:trigger_event_a, :trigger_event_b]
     before_action :set_iterable_service, only: [:trigger_event_a, :trigger_event_b]
-  
+    
     def index
     end
   
