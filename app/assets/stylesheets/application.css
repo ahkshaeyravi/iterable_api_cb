@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ .logout-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none; /* Optional: Remove underline */
+    color: #000; /* Optional: Set text color */
+    font--size: 16px; /* Optional: Set font size */
+}

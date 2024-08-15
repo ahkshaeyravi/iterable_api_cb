@@ -1,5 +1,9 @@
 
-<h1>Welcome - Iterable API Mocks</h1> 
+<h1>Welcome - Iterable API Mocks</h1>
+
+<% if user_signed_in? %>
+  <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-link' %>
+<% end %>
 
 <h1>Create events using either one of the below two buttons</h1>
 
